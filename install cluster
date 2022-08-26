@@ -128,6 +128,13 @@ To apply pods network communication we use Wave  network
 to see the list of Pods we will use this command 
 kubectl get pods --all-namespaces
 
+#### step 9 
+install helm by below 
+
+ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+ chmod 700 get_helm.sh
+ ./get_helm.sh
+
 ```
 
 
