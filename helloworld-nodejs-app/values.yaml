@@ -1,0 +1,25 @@
+
+# common values at global level. 
+namespace: demo
+
+# micro-service specific values inside each service subsection.
+hello:
+  image: 
+    name: 3788/helloworld
+    tag: '1.0'
+    pullpolicy: IfNotPresent
+  container:
+    port: 8080
+    protocol: TCP
+  resources:
+  replicas: 3
+  service:
+    type: NodePort
+    port: 80
+  securityContextConstraints:
+     capabilities:
+         add:
+            - NET_ADMIN
+            - NET_RAW
+ 
+   
