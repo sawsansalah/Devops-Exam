@@ -33,8 +33,12 @@ spec:
               protocol: {{ .Values.hello.container.protocol }}
           resources:
 {{ toYaml .Values.hello.resources | indent 12 }}
-          # livenessProbe
-          # volumeMounts
+          
+          readinessProbe:
+            httpGet:
+              path: 
+              port: http
+          
       # volumes
       restartPolicy: Always
 status: {}
