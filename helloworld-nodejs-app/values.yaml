@@ -19,7 +19,6 @@ hello:
   securityContextConstraints:
      capabilities:
          add:
-            - NET_ADMIN
-            - NET_RAW
- 
+            - CAP_CHOWN
+            
    
